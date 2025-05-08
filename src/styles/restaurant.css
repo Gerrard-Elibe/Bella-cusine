@@ -1,0 +1,194 @@
+ /* Page entrance animation */
+.restaurant-page.page-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.restaurant-page.page-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.restaurant-page {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf5;
+  color: #333;
+}
+
+/* Fixed back button */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  padding: 0.5rem 1.2rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #c0392b;
+}
+
+.back-button.hidden {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.back-button.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Parallax-style header */
+.restaurant-header {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+  background: url('../../public/italy8.avif') center/cover no-repeat fixed;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.restaurant-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.restaurant-header p {
+  font-size: 1.2rem;
+}
+
+/* Slideshow */
+.restaurant-slideshow {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Dishes Section */
+.dishes-gallery {
+  padding: 3rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.dishes-gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #b32d00;
+}
+
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.dish {
+  background: #fff7f0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.dish:hover {
+  transform: scale(1.05) rotateZ(-0.3deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.dish img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.dish h3 {
+  margin-top: 1rem;
+  color: #b32d00;
+}
+
+.dish p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #fff1e6;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.2rem;
+  color: #b32d00;
+  margin-bottom: 2rem;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .restaurant-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .restaurant-header p {
+    font-size: 1rem;
+  }
+
+  .slide-caption {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    top: 15px;
+    left: 15px;
+  }
+}

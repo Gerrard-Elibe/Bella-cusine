@@ -1,0 +1,337 @@
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9; /* Soft off-white background */
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-dashboard.dark {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d74d27; /* Deep red for the header */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.admin-actions button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.admin-actions button:hover {
+  transform: scale(1.1);
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  background-color: #ff6f61; /* Warm red */
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #ff3b2f; /* Darker red on hover */
+}
+
+.search-filter {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-filter input,
+.search-filter select {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 48%;
+  font-size: 16px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.search-filter input:focus,
+.search-filter select:focus {
+  outline: none;
+  border-color: #3e7bf8;
+}
+
+.applicants-section {
+  margin-top: 30px;
+}
+
+.applicants-section h2 {
+  font-size: 22px;
+  color: #887878;
+}
+
+.no-applicants {
+  font-size: 18px;
+  color: #777;
+}
+
+.applicant-card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.applicant-card:hover {
+  transform: translateY(-5px);
+}
+
+.applicant-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.applicant-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.applicant-card p strong {
+  color: #d74d27; /* Red accent for strong text */
+}
+
+.admin-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.accept-btn,
+.decline-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.accept-btn {
+  background-color: #4caf50; /* Green for accept button */
+  color: white;
+}
+
+.decline-btn {
+  background-color: #f44336; /* Red for decline button */
+  color: white;
+}
+
+.accept-btn:hover {
+  background-color: #45a049;
+}
+
+.decline-btn:hover {
+  background-color: #e53935;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #3e7bf8;
+  color: white;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button.active {
+  background-color: #2a58e0;
+}
+
+.pagination button:hover {
+  background-color: #1e4bb8;
+}
+
+/* -------------------------- Responsive Styles -------------------------- */
+@media screen and (max-width: 1024px) {
+  .admin-dashboard {
+    padding: 15px;
+  }
+
+  .admin-header h1 {
+    font-size: 20px;
+  }
+
+  .search-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-filter input,
+  .search-filter select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .applicant-card {
+    padding: 15px;
+  }
+
+  .admin-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .pagination button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .admin-dashboard {
+    padding: 10px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .admin-header h1 {
+    font-size: 18px;
+  }
+
+  .admin-actions {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .admin-actions button {
+    margin: 5px;
+  }
+
+  .search-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-filter input,
+  .search-filter select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .applicant-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .applicant-card h3 {
+    font-size: 18px;
+  }
+
+  .applicant-card p {
+    font-size: 14px;
+  }
+
+  .admin-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pagination {
+    flex-direction: column;
+  }
+
+  .pagination button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .admin-dashboard {
+    padding: 5px;
+  }
+
+  .admin-header h1 {
+    font-size: 16px;
+  }
+
+  .admin-actions button {
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  .search-filter input,
+  .search-filter select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .applicant-card {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .applicant-card h3 {
+    font-size: 16px;
+  }
+
+  .applicant-card p {
+    font-size: 12px;
+  }
+
+  .admin-buttons button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .pagination button {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}

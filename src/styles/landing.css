@@ -1,0 +1,386 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 5%;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.hero-motto {
+  font-size: 1.3rem;
+  color: #16a085;
+  margin-bottom: 25px;
+}
+
+.hero-cta-buttons button {
+  margin-right: 15px;
+  background-color: #16a085;
+  color: #fff;
+}
+
+.hero-cta-buttons button:hover {
+  background-color: #138d75;
+}
+
+.hero-image-container {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Job Opportunities */
+.job-opportunities {
+  padding: 60px 5%;
+  background-color: #fdfaf4;
+  text-align: center;
+}
+
+.job-opportunities h2 {
+  font-size: 2.5rem;
+  color: #e67e22;
+  margin-bottom: 20px;
+}
+
+.job-opportunities p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+}
+
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.job-item {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.job-item:hover {
+  transform: translateY(-5px);
+}
+
+.job-item h3 {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.job-item p {
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.job-item .cta-button {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.job-item .cta-button:hover {
+  background-color: #d35400;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 60px 5%;
+  background: #f6f6f6;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #2980b9;
+  margin-bottom: 40px;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #7f8c8d;
+}
+
+.testimonial h4 {
+  color: #2980b9;
+}
+
+/* Get In Touch */
+.get-in-touch {
+  padding: 60px 5%;
+  background-color: #fffdf6;
+  text-align: center;
+}
+
+.get-in-touch h2 {
+  font-size: 2.5rem;
+  color: #27ae60;
+  margin-bottom: 20px;
+}
+
+.get-in-touch p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+}
+
+.get-in-touch-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  resize: none;
+}
+
+.textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.footer a {
+  color: #fee36e; /* Shocking Yellow */
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fee36e; /* Shocking Yellow */
+}
+
+/* Footer CTA Button */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-links .cta-button {
+  background-color: #f1c40f; /* Golden color */
+  color: #fff; /* White text */
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-links .cta-button:hover {
+  background-color: #e67e22; /* Orange color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.footer-links .cta-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add subtle focus glow */
+}
+
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 50px 5%;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-motto {
+    font-size: 1.1rem;
+  }
+
+  .hero-image {
+    max-width: 450px;
+  }
+
+  .job-opportunities {
+    padding: 40px 5%;
+  }
+
+  .job-opportunities h2 {
+    font-size: 2rem;
+  }
+
+  .job-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial {
+    padding: 20px;
+  }
+
+  .get-in-touch h2 {
+    font-size: 2rem;
+  }
+
+  .get-in-touch p {
+    font-size: 1rem;
+  }
+
+  .footer-links .cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-motto {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 400px;
+  }
+
+  .job-item {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .testimonials h2 {
+    font-size: 1.8rem;
+  }
+
+  .testimonial {
+    padding: 15px;
+  }
+
+  .get-in-touch h2 {
+    font-size: 1.8rem;
+  }
+
+  .get-in-touch p {
+    font-size: 1rem;
+  }
+
+  .footer-links .cta-button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}

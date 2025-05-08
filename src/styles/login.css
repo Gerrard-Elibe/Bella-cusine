@@ -1,0 +1,226 @@
+/* Admin Login Page */
+.admin-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the content horizontally */
+    height: calc(100vh - 60px); /* Full height minus the navbar */
+    width: 100%;
+    background: linear-gradient(45deg, #3498db, #8e44ad, #2ecc71); /* Vibrant gradient */
+    background-size: 400% 400%;
+    animation: backgroundAnimate 10s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 60px; /* Add padding to offset the navbar */
+  }
+  
+  @keyframes backgroundAnimate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Styling for the heading */
+  .login-logo {
+    width: 100%;
+    text-align: center; /* Center the heading */
+    margin-bottom: 2rem; /* Ensure space below the heading */
+  }
+  
+  .login-logo h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Styling for the login form */
+  .admin-login form {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-login form:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.15), rgba(0,0,0,0.3)); /* Dark gradient overlay */
+    border-radius: 10px;
+    z-index: -1;
+  }
+  
+  /* Styling for input fields */
+  .admin-login input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    transition: all 0.3s ease;
+  }
+  
+  .admin-login input:focus {
+    background-color: #eaf1f1;
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* Styling for password field with eye icon */
+  .password-input {
+    position: relative;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    top: 40%;
+    right: -10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #3498db;
+    font-size: 1.5rem;
+  }
+  
+  /* Styling for the login button */
+  .admin-login button {
+    padding: 1rem;
+    background-color: #3498db; /* Primary Blue */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .admin-login button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px); /* Lift the button on hover */
+  }
+  
+  .admin-login button:active {
+    transform: translateY(1px); /* Button presses down on click */
+  }
+  
+  /* Styling for the non-admin message */
+  .non-admin-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .non-admin-message a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .non-admin-message a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ------------------------- Responsive Styles ------------------------- */
+  
+  /* For tablets and larger screens */
+  @media screen and (max-width: 1024px) {
+    .admin-login {
+      padding-top: 40px; /* Adjust padding for better fit */
+    }
+  
+    .login-logo h2 {
+      font-size: 1.8rem;
+    }
+  
+    .admin-login form {
+      padding: 1.5rem 2.5rem; /* Adjust padding for smaller screens */
+      max-width: 350px;
+    }
+  
+    .admin-login input {
+      padding: 0.7rem;
+      font-size: 0.95rem;
+    }
+  
+    .admin-login button {
+      padding: 0.9rem;
+      font-size: 1rem;
+    }
+  
+    .non-admin-message {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* For mobile devices (below 768px) */
+  @media screen and (max-width: 768px) {
+    .admin-login {
+      padding-top: 20px;
+    }
+  
+    .login-logo h2 {
+      font-size: 1.6rem;
+    }
+  
+    .admin-login form {
+      padding: 1rem 2rem;
+      max-width: 300px;
+    }
+  
+    .admin-login input {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  
+    .admin-login button {
+      padding: 0.8rem;
+      font-size: 0.95rem;
+    }
+  
+    .non-admin-message {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* For smaller screens (below 480px) */
+  @media screen and (max-width: 480px) {
+    .admin-login {
+      padding-top: 15px;
+    }
+  
+    .login-logo h2 {
+      font-size: 1.4rem;
+    }
+  
+    .admin-login form {
+      padding: 0.8rem 1.5rem;
+      max-width: 280px;
+    }
+  
+    .admin-login input {
+      padding: 0.5rem;
+      font-size: 0.85rem;
+    }
+  
+    .admin-login button {
+      padding: 0.7rem;
+      font-size: 0.9rem;
+    }
+  
+    .non-admin-message {
+      font-size: 0.8rem;
+    }
+  }
+  

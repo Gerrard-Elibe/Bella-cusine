@@ -1,0 +1,369 @@
+/* Main Container */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content; /* Full viewport height */
+  padding: 20px; /* Padding to prevent edge clipping */
+  position: relative;
+  overflow: hidden;
+  animation: flowColorsMain 6s ease infinite; /* Applying color animation here */
+}
+
+/* Flowing Colors Animation for Main Container */
+@keyframes flowColorsMain {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main-container {
+  background: linear-gradient(45deg, #ff6347, #27ae60, #2980b9, #f39c12);
+  background-size: 400% 400%; /* Make the gradient large enough to flow */
+}
+
+/* Global Form Container */
+.form-container {
+  width: 40%;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: #fff; /* White background for the form */
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out; /* Animation for the form itself */
+  position: relative;
+  overflow: hidden;
+  animation: flowColorsForm 6s ease infinite; /* Different flowing color animation */
+}
+
+/* Flowing Colors Animation for Form Container */
+@keyframes flowColorsForm {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-container {
+  background: linear-gradient(45deg, #e67e22, #8e44ad, #f39c12, #2980b9);
+  background-size: 400% 400%; /* Make the gradient large enough to flow */
+}
+
+/* Fade In Animation for Form */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title Animation */
+.form-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #e74c3c; /* Vibrant Red for emphasis */
+  animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Form Inputs with Smooth Animations */
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Label Animation */
+.application-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Input, Select, Textarea Styles */
+.application-form input,
+.application-form select,
+.application-form textarea {
+  padding: 0.75rem 1rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fffaf5; /* Soft cream color */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: inputBounce 0.5s ease-out;
+  resize: none;
+}
+
+@keyframes inputBounce {
+  0% {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+  border-color: #e67e22; /* Vibrant Orange */
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(230, 126, 34, 0.8);
+  transform: scale(1.02);
+}
+
+/* Back Button */
+.back-button {
+  background: none;
+  border: none;
+  color: #e74c3c; /* Vibrant Red */
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out, transform 0.2s ease;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.back-button:hover {
+  color: #c0392b; /* Darker Red */
+  transform: translateX(-5px);
+}
+
+.back-button:active {
+  transform: translateX(2px);
+}
+
+/* Submit Button with Animation */
+.submit-button {
+  background-color: #e67e22; /* Vibrant Orange */
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  animation: popIn 1s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.submit-button:hover {
+  background-color: #d35400; /* Darker Orange */
+  transform: translateY(-5px);
+}
+
+.submit-button:active {
+  transform: translateY(2px);
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ffffff;
+  border-top: 3px solid #e67e22; /* Orange spinner */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 2rem;
+  color: #27ae60;
+  margin-bottom: 20px;
+}
+
+/* Modal Message */
+.modal-message {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+/* Close Button */
+.close-modal-button {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-modal-button:hover {
+  background-color: #2ecc71;
+}
+
+/* Modal Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* For Small Mobile Screens */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  .form-container {
+    width: 90%; /* Full width for smaller screens */
+    padding: 1rem;
+  }
+
+  .form-container h2 {
+    font-size: 1.8rem; /* Slightly smaller font for mobile */
+  }
+
+  .application-form input,
+  .application-form select,
+  .application-form textarea {
+    font-size: 0.9rem; /* Smaller font size for input fields */
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem; /* Adjust button size */
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+  }
+}
+
+/* For Larger Mobile Screens (e.g., iPhone 6, 7, 8) */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 15px;
+  }
+
+  .form-container {
+    width: 80%;
+    padding: 1.5rem;
+  }
+
+  .form-container h2 {
+    font-size: 2rem; /* Slightly smaller font for medium mobiles */
+  }
+
+  .application-form input,
+  .application-form select,
+  .application-form textarea {
+    font-size: 1rem;
+  }
+
+  .submit-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.3rem; /* Adjust for medium screens */
+  }
+
+  .back-button {
+    font-size: 1rem;
+  }
+}
