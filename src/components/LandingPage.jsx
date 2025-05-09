@@ -72,20 +72,13 @@ const LandingPage = () => {
           {[
             "Virtual Assistant",
             "Customer Service Representative",
-            "Online Order Manager",
-            "Social Media Manager",
-            "Digital Marketer",
-            "Content Creator",
+
           ].map((role, index) => (
             <div key={index} className="job-item">
               <h3>{role}</h3>
               <p>{{
                 "Virtual Assistant": "Support administrative tasks, manage communication, and keep things running smoothly.",
                 "Customer Service Representative": "Assist customers with inquiries and ensure a delightful experience.",
-                "Online Order Manager": "Monitor and coordinate incoming food orders efficiently.",
-                "Social Media Manager": "Create engaging content and manage our online presence.",
-                "Digital Marketer": "Drive customer engagement through digital campaigns and promotions.",
-                "Content Creator": "Write menus, blogs, and social media content to promote our brand."
               }[role]}</p>
               <Link to="/apply">
                 <button className="cta-button">Apply Now</button>
@@ -107,12 +100,6 @@ const LandingPage = () => {
         >
           <SwiperSlide>
             <div className="testimonial">
-              <p>"Managing online orders from my home office has been smooth and fulfilling. Bella Cucina trusts and empowers us!"</p>
-              <h4>- Michael, Online Order Manager</h4>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="testimonial">
               <p>"As a VA, I handle daily tasks from anywhere. The flexibility has boosted my productivity and well-being."</p>
               <h4>- Emily, Virtual Assistant</h4>
             </div>
@@ -123,24 +110,7 @@ const LandingPage = () => {
               <h4>- Sarah, Customer Service Representative</h4>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className="testimonial">
-              <p>"Creating content and managing campaigns remotely is a dream come true. The culture is collaborative and inclusive."</p>
-              <h4>- Daniel, Digital Marketer</h4>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="testimonial">
-              <p>"Even working from different cities, I feel connected. Bella Cucina has built an amazing remote work environment."</p>
-              <h4>- Jessica, Content Creator</h4>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="testimonial">
-              <p>"Working remotely here has taught me how valuable and respected employees can feel—even from home."</p>
-              <h4>- James, Social Media Manager</h4>
-            </div>
-          </SwiperSlide>
+
         </Swiper>
       </section>
 

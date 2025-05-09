@@ -94,11 +94,6 @@ const ApplicationForm = () => {
     <option value="">Select Position</option>
     <option value="Virtual Assistant">Virtual Assistant</option>
     <option value="Customer Service Representative">Customer Service Representative</option>
-    <option value="Online Order Manager">Online Order Manager</option>
-
-    <option value="Social Media Manager">Social Media Manager</option>
-    <option value="Digital Marketer">Digital Marketer</option>
-    <option value="Content Creator">Content Creator</option>
   </select>
 </label>
 
