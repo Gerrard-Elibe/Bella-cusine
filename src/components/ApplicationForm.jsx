@@ -89,17 +89,19 @@ const ApplicationForm = () => {
           </label>
 
           <label>
-            Position:
-            <select name="position" required value={formData.position} onChange={handleChange}>
-              <option value="">Select Position</option>
-              <option value="Chef">Chef</option>
-              <option value="Waitstaff">Server</option>
-              <option value="Bartender">Bartender</option>
-              <option value="Cleaner">Cleaner</option>
-              <option value="Delivery Rider">Delivery Rider</option>
-              <option value="Restaurant Manager">Restaurant Manager</option>
-            </select>
-          </label>
+  Position:
+  <select name="position" required value={formData.position} onChange={handleChange}>
+    <option value="">Select Position</option>
+    <option value="Virtual Assistant">Virtual Assistant</option>
+    <option value="Customer Service Representative">Customer Service Representative</option>
+    <option value="Online Order Manager">Online Order Manager</option>
+
+    <option value="Social Media Manager">Social Media Manager</option>
+    <option value="Digital Marketer">Digital Marketer</option>
+    <option value="Content Creator">Content Creator</option>
+  </select>
+</label>
+
 
           <label>
             Experience:

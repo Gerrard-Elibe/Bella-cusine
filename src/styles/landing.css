@@ -111,7 +111,7 @@ button:hover {
   background-color: #ffffff;
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   width: 300px;
   transition: transform 0.3s ease;
 }
@@ -158,7 +158,7 @@ button:hover {
   border-radius: 15px;
   max-width: 700px;
   margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
 .testimonial p {
@@ -219,8 +219,7 @@ button:hover {
 }
 
 .textarea {
-  height: 120px;
-  resize: none;
+  height: 120px; /* You can adjust this value as needed */
 }
 
 /* Footer */
@@ -284,18 +283,18 @@ button:hover {
 }
 
 /* Mobile and Tablet Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .hero {
-    flex-direction: column;
     padding: 50px 5%;
+    flex-direction: column;
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .hero-motto {
@@ -341,13 +340,18 @@ button:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 5%;
+  }
+
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .hero-motto {
@@ -358,9 +362,13 @@ button:hover {
     max-width: 400px;
   }
 
+  .job-opportunities {
+    padding: 30px 5%;
+  }
+
   .job-item {
-    padding: 20px;
     width: 100%;
+    margin-bottom: 15px;
   }
 
   .testimonials h2 {
@@ -380,7 +388,47 @@ button:hover {
   }
 
   .footer-links .cta-button {
-    font-size: 14px;
+    font-size: 13px;
     padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-motto {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 350px;
+  }
+
+  .job-item {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .testimonials h2 {
+    font-size: 1.8rem;
+  }
+
+  .testimonial {
+    padding: 10px;
+  }
+
+  .get-in-touch h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-links .cta-button {
+    font-size: 12px;
+    padding: 6px 15px;
   }
 }

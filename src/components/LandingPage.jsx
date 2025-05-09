@@ -66,19 +66,26 @@ const LandingPage = () => {
 
       {/* Job Opportunities */}
       <section className="job-opportunities" data-aos="fade-up">
-        <h2>Job Opportunities</h2>
-        <p>We are looking for passionate individuals to join our team. Explore our open positions:</p>
+        <h2>Remote Job Opportunities</h2>
+        <p>Join our innovative team and work from the comfort of your home. Explore our available remote roles:</p>
         <div className="job-list">
-          {["Chef", "Server", "Barista", "Cleaner", "Delivery Rider", "Restaurant Manager"].map((role, index) => (
+          {[
+            "Virtual Assistant",
+            "Customer Service Representative",
+            "Online Order Manager",
+            "Social Media Manager",
+            "Digital Marketer",
+            "Content Creator",
+          ].map((role, index) => (
             <div key={index} className="job-item">
               <h3>{role}</h3>
               <p>{{
-                Chef: "Craft traditional Italian dishes with creativity and passion.",
-                Server: "Provide exceptional service and create memorable dining experiences.",
-                Barista: "Serve Italian-style coffee and beverages with care.",
-                Cleaner: "Maintain a spotless and welcoming environment.",
-                "Delivery Rider": "Deliver warm meals to our local customers.",
-                "Restaurant Manager": "Lead staff and ensure top-quality service.",
+                "Virtual Assistant": "Support administrative tasks, manage communication, and keep things running smoothly.",
+                "Customer Service Representative": "Assist customers with inquiries and ensure a delightful experience.",
+                "Online Order Manager": "Monitor and coordinate incoming food orders efficiently.",
+                "Social Media Manager": "Create engaging content and manage our online presence.",
+                "Digital Marketer": "Drive customer engagement through digital campaigns and promotions.",
+                "Content Creator": "Write menus, blogs, and social media content to promote our brand."
               }[role]}</p>
               <Link to="/apply">
                 <button className="cta-button">Apply Now</button>
@@ -90,24 +97,48 @@ const LandingPage = () => {
 
       {/* Testimonials */}
       <section id="testimonials" className="testimonials" data-aos="fade-up">
-        <h2>What Our Employees Say</h2>
+        <h2>What Our Remote Team Says</h2>
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
           loop={true}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 4000 }}
           modules={[Autoplay]}
         >
           <SwiperSlide>
             <div className="testimonial">
-              <p>"Working at Bella Cucina has been a life-changing experience! The team is supportive and inspiring."</p>
-              <h4>- John, Chef</h4>
+              <p>"Managing online orders from my home office has been smooth and fulfilling. Bella Cucina trusts and empowers us!"</p>
+              <h4>- Michael, Online Order Manager</h4>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="testimonial">
-              <p>"It's more than just a job—it's a family. I'm proud to be part of Bella Cucina!"</p>
-              <h4>- Maria, Server</h4>
+              <p>"As a VA, I handle daily tasks from anywhere. The flexibility has boosted my productivity and well-being."</p>
+              <h4>- Emily, Virtual Assistant</h4>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="testimonial">
+              <p>"Customer support is meaningful when you work for a brand that truly cares. I love being part of the Bella team remotely."</p>
+              <h4>- Sarah, Customer Service Representative</h4>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="testimonial">
+              <p>"Creating content and managing campaigns remotely is a dream come true. The culture is collaborative and inclusive."</p>
+              <h4>- Daniel, Digital Marketer</h4>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="testimonial">
+              <p>"Even working from different cities, I feel connected. Bella Cucina has built an amazing remote work environment."</p>
+              <h4>- Jessica, Content Creator</h4>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="testimonial">
+              <p>"Working remotely here has taught me how valuable and respected employees can feel—even from home."</p>
+              <h4>- James, Social Media Manager</h4>
             </div>
           </SwiperSlide>
         </Swiper>
@@ -157,25 +188,26 @@ const LandingPage = () => {
         </form>
       </section>
 
+      {/* Footer */}
       <footer className="footer" data-aos="fade-up">
-              <div className="footer-content">
-           <p>&copy; 2025 Bella Cucina | All Rights Reserved</p>
-            <div className="footer-links">
-           <Link to="/apply">Apply Now</Link>
-              </div>
-               <p>Follow Us on Social Media</p>
-               <div className="social-links">
+        <div className="footer-content">
+          <p>&copy; 2025 Bella Cucina | All Rights Reserved</p>
+          <div className="footer-links">
+            <Link to="/apply">Apply Now</Link>
+          </div>
+          <p>Follow Us on Social Media</p>
+          <div className="social-links">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook size={30} /></a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram size={30} /></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter size={30} /></a>
-              </div>
-                 <div className="footer-links">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter size={30} /></a>
+          </div>
+          <div className="footer-links">
             <Link to="/admin">
               <button className="cta-button">Go to Admin Dashboard</button>
-              </Link>
-    </div>
-  </div>
-</footer>
+            </Link>
+          </div>
+        </div>
+      </footer>
 
     </div>
   );
