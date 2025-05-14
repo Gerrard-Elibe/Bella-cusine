@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaTelegram } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import restaurant from "../../public/restaurant.avif";
@@ -165,12 +165,13 @@ const LandingPage = () => {
           <div className="footer-links">
             <Link to="/apply">Apply Now</Link>
           </div>
-          <p>Follow Us on Social Media</p>
-          <div className="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook size={30} /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram size={30} /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter size={30} /></a>
-          </div>
+                 <p>Follow Us on Social Media</p>
+<div className="social-links">
+  <a href="https://t.me/human_resources34" target="_blank" rel="noopener noreferrer">
+    <FaTelegram size={30} />
+  </a>
+</div>
+
           <div className="footer-links">
             <Link to="/admin">
               <button className="cta-button">Go to Admin Dashboard</button>

@@ -113,24 +113,34 @@ const ApplicationForm = () => {
           </button>
         </form>
 
-        {/* Success Modal */}
-        <ReactModal
-          isOpen={isModalOpen}
-          onRequestClose={closeModal}
-          contentLabel="Application Success"
-          className="modal-content"
-          overlayClassName="modal-overlay"
-        >
-          <h2 className="modal-title">Application Submitted!</h2>
-          <p className="modal-message">
-            Your application has been submitted successfully! We will review your application and get back to you shortly.
-            <br />
-            For any questions, you can contact us at +123-456-7890 or reach out to us on our social media handles.
-          </p>
-          <button onClick={closeModal} className="close-modal-button">
-            Close
-          </button>
-        </ReactModal>
+{/* Success Modal */}
+<ReactModal
+  isOpen={isModalOpen}
+  onRequestClose={closeModal}
+  contentLabel="Application Success"
+  className="modal-content"
+  overlayClassName="modal-overlay"
+>
+  <h2 className="modal-title">🎉 Application Submitted!</h2>
+  <p className="modal-message">
+    Thank you for applying! We've received your application and our team will review it shortly.
+    <br /><br />
+    If you have any questions in the meantime, feel free to contact our HR team on Telegram:&nbsp;
+    <a
+      href="https://t.me/human_resources34"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="telegram-link"
+    >
+      @human_resources34
+    </a>.
+  </p>
+
+  <button onClick={closeModal} className="close-modal-button">
+    Close
+  </button>
+</ReactModal>
+
       </div>
     </div>
   );

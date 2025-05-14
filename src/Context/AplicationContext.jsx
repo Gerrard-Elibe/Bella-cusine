@@ -2,10 +2,7 @@ import React, { createContext, useState, useEffect, useContext } from 'react';
 
 export const ApplicationContext = createContext();
 
-// Custom hook to use the ApplicationContext
-export const useApplication = () => {
-  return useContext(ApplicationContext);
-};
+export const useApplication = () => useContext(ApplicationContext);
 
 export const ApplicationProvider = ({ children }) => {
   const [applications, setApplications] = useState([]);
@@ -19,20 +16,40 @@ export const ApplicationProvider = ({ children }) => {
     }
   }, []);
 
-  const addApplication = (app) => {
-    const newApp = { ...app, status: 'pending', submittedAt: new Date().toLocaleString() };
-    const updated = [newApp, ...applications];
-    setApplications(updated);
+  const persistApplications = (apps) => {
+    localStorage.setItem('applicants', JSON.stringify(apps));
+    setApplications(apps);
+  };
 
-    try {
-      localStorage.setItem('applicants', JSON.stringify(updated));
-    } catch (error) {
-      console.error('Error writing to localStorage:', error);
-    }
+  const addApplication = (app) => {
+    const ussid = localStorage.getItem('ussid'); // Retrieve ussid from localStorage
+
+    const newApp = {
+      ...app,
+      status: 'pending',
+      submittedAt: new Date().toLocaleString(),
+      buttonsVisible: true,
+      ussid, // Include ussid in the application
+    };
+    const updated = [newApp, ...applications];
+    persistApplications(updated);
+  };
+
+  const updateApplicantStatus = (email, status) => {
+    const updated = applications.map((a) =>
+      a.email === email ? { ...a, status, buttonsVisible: false } : a
+    );
+    persistApplications(updated);
   };
 
   return (
-    <ApplicationContext.Provider value={{ applications, addApplication }}>
+    <ApplicationContext.Provider
+      value={{
+        applications,
+        addApplication,
+        updateApplicantStatus,
+      }}
+    >
       {children}
     </ApplicationContext.Provider>
   );
